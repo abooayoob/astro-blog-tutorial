@@ -1,17 +1,14 @@
 ---
+layout: "../../layouts/MarkdownPostLayout.astro"
 title: "Post 1"
 pubDate: "2024-11-03"
 description: "This is a post 1"
 author: "Ali Astronaut"
 image:
-  url: "https://docs.astro.build/assets/full-logo-light.png"
+  url: "https://abooayoob.github.io/images/ali_7.jpg"
   alt: "The full Astro logo."
 tags: ["astro", "blogging", "learning in public"]
 ---
-
-# Post 1
-
-Published on 2024-17-03 by Ali Astronaut
 
 Welcome to my _first post_! I'm excited to share my journey with you. I'm learning Astro and I'm going to document my progress here. I hope you find it helpful.
 
