@@ -132,6 +132,14 @@ a:focus {
 html.dark {
   background-color: #0d0950;
   color: #fff;
+
+  a:visited {
+    color: #fff;
+  }
+
+  .skill {
+    color: pink;
+  }
 }
 
 .dark .nav-links a {
