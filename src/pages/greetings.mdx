@@ -3,14 +3,22 @@ layout: "../layouts/BaseLayout.astro"
 person: "Peeps!"
 ---
 
-import Greeting from "../components/Greeting";
+import Greeting from "../components/preact/Greeting";
+import HelloReact from "../components/react/HelloReact";
+import { SimpleMachine } from "../components/react/simple-machine/SimpleMachine";
 
 # Greetings {frontmatter.person}
 
 <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+
+<HelloReact client:load name="Ali" age={41} />
+
+<SimpleMachine client:load />
 
 ## This is pretty great, right?
 
 - Markdown
 - Frontmatter
 - Components
+- React
+- Preact
