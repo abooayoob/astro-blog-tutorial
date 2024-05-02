@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-const { pageTitle } = Astro.props;
+const { pageTitle, frontmatter } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,12 +17,24 @@ const { pageTitle } = Astro.props;
     <Header />
 
     <h1>{pageTitle}</h1>
+    <h2>{frontmatter?.name}</h2>
     <slot />
 
     <Footer />
 
-    <script>
-      import "../scripts/menu.js";
+    <script define:vars={{frontmatter}}>
+      // import "../scripts/menu.js";
+      // @ts-ignore
+      if (frontmatter?.youtube) {
+        window.onYouTubeIframeAPIReady = function () {
+          window.iframeApiReady = true;
+        };
+
+        let tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        tag.id = "yt-iframe-api";
+        document.body.appendChild(tag);
+      }
     </script>
   </body>
 </html>

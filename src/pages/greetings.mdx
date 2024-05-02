@@ -1,11 +1,14 @@
 ---
 layout: "../layouts/BaseLayout.astro"
 person: "Peeps!"
+youtube: true
+name: "asdlkjasdlkfjsdlkjf"
 ---
 
 import Greeting from "../components/preact/Greeting";
 import HelloReact from "../components/react/HelloReact";
 import { SimpleMachine } from "../components/react/simple-machine/SimpleMachine";
+import { YTPlayer } from "../components/react/yt-player/YTPlayer";
 
 # Greetings {frontmatter.person}
 
@@ -14,6 +17,10 @@ import { SimpleMachine } from "../components/react/simple-machine/SimpleMachine"
 <HelloReact client:load name="Ali" age={41} />
 
 <SimpleMachine client:load />
+
+<YTPlayer client:only="react" videoId="bS9em7Bg0iU" start={5} end={10} />
+<hr />
+<YTPlayer client:only="react" videoId="AgyJv2Qelwk" />
 
 ## This is pretty great, right?
 
