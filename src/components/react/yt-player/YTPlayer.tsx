@@ -39,9 +39,9 @@ export function YTPlayer({
     },
   });
 
-  actor.onTransition((state) => {
-    console.log("state", state.event, state.toStrings());
-  });
+  // actor.onTransition((state) => {
+  //   console.log("state", state.event, state.toStrings());
+  // });
 
   function onPlayerReady() {
     send({ type: "ready" });
@@ -96,6 +96,7 @@ export function YTPlayer({
           onError: onPlayerError,
         },
       });
+      window.YTPlayers[videoId] = player.current;
     }
   }, [state.context.iframeRendered]);
 

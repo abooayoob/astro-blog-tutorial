@@ -16,7 +16,7 @@ export const createYtPlayerMachine = ({
 }) =>
   createMachine(
     {
-      /** @xstate-layout N4IgpgJg5mDOIC5QE8AuBaAtgQwMYAsBLAOzADoAlMYiMAJwAIBJAMzu0zAGJC2OwGdarSEQA2gAYAuolAAHAPaxCqQguKyQAD0QBGCbrIB2ACy6ATLpMBOa7osAOBwDYANCGSJzRsibPWjCSMAZmsJaxNnAFYjAF9Y9zQsPCJSMgAZBWwIBjkAG2xkei4hbORJGSQQRWVVdU0dBCiow2drBysHcyjg83MHE0TEKIkyXWdoro6W3RCHeMSMHAIScgAFAqLGUohkMgB5OXpsOuJYMgA5BVRczZIoLjX0gEEATSYLgHEKzRqVNQ0VUaUWcPl0YV0UTsEnMzmC0SGTSMDjIBmCwSMUXMZlmAwWHiWKVWZA2hXogjAZQOR3Yp3OVxu+UK9zITGI-2weUezwAqgBlACiABEflU-qcGnpgiinNZvA5rG1rMERg5ETZrGQwiFgvoTDEOiZ8Ullql1ptyTs9odjnTLtdbsziFBWezVJyuAKLkLhaL5Ep-vUgXoTMEyPDwSrOgMzIMPIhnOYw0nIS54SYJBjrMbCSs0qSthSqTbaQD6Q6mcgWQA1Qi0BQMWCoBRyI4QEnYACusEgnu9vukvwDEuDCF6UTGISi+qMSel5kRMUMyPG8Ik4WVRmcOeSefNZO2lN21NtZftjLuzrItfrjebrcgZAFNF7Qkrfuqw4BkoQ5lsxgxFUgmnKxQ0RQIfGiExvGlBxkXhbMEgJXczRJC1D2LGkTjPAt7m5fkB0qf1am-UdnF0GUXA6JMXFnWF1SccMJGcTN+hhKFTGCHdTWJAtLSPa0sLtXDnT7H0RUHMUvyDUBGkTMMVQiZwHBBEFdTceMEGiZwtRVEwumYkxTDxJCTSJNIAGF8DAXAAGtmD4ThnjWJguA-cVSNkxB0FxLU2nsAZdXaIxrERcYUU4xMQuCIyDDlbjzPIKybPs1h2CclyuC0JsTnIbAWFQegAApgnXABKLgzL3Mhkrshz0rAZymHc6TAS8hB0FKhTIjsTpZ30SFESC1FEwmCQsQcaVxqieIkOIBRaHgKoqrNIcSJk7RvKjcMevsfT+oMKJEXQUFUWRDpyM6JU4lM3NUKoF9GDS-g1sDNrNo68wDGMLoWKCWZQwGREvrIbEcQkPwglKyEjVulDiUybJHS2V6R3a0JRlAto4RiZwjImdVNUm-UWhiTMIicBLqr4jDdlRzyPvQCd7CCSxM3XPG5WCMKRlRAwYVMcEHHGxDFnh-N0KLY8S2w9QluIt6f2gshZXlRVbCAtVNKTHxelCL6ommOF5jhniJYPKXBNPOXz2R+56Y2xowhVhU1aVTWhuxMg8dBaxca+vpdCp1Cactk9Sxthk7avNkOTyB33saKxMdBZoQnXPxTCMRc4TIGJ4SVCRhdsUXkLN-dCytcPZbOW3KxrOswAbJsWzbBOf26ZdAJGTFYzAzScT8xVAgibFhdDYPeMlquZbtKP66vG8m7vVvHzWLsewgdvR16TVYSCJxp2RSxuYH-8-1hGHouF8xJ-NyuBOrueK0vF0l+b+82yfF8t6k9bE8QOiMMVhMSszXKGGIiI8YokVCpFw0FMxYlvqbRKaELYzyEjhV+292oj1RJfXUvRMS9F0IuIwkEOgxVCIqfU24UHVVqqlRyjUXI4JAPeLwysjCOHaAqCibQjogDyGAAq3lwSjD1luAKXQtzwncAAI2uM2TAXhnbcP6LwuwLg-buDoIQKA+BUDeUCOGHWl0nDeDhBpAA7nWVA+A9BfXcNZfRhjED6XcI0HyztJHmJkVY4GXCeGyn4X7WasQgA */
+      /** @xstate-layout N4IgpgJg5mDOIC5QE8AuBaAtgQwMYAsBLAOzADoAlMYiMAJwAIBJAMzu0zAGJC2OwGdarSEQA2gAYAuolAAHAPaxCqQguKyQAD0QBGCbrIB2ACy6ATLpMBOa7osAOBwDYANCGSJzRsibPWjCSMAZmsJaxNnAFYjAF9Y9zQsPCJSMgAZBWwIBjkAG2xkei4hbORJGSQQRWVVdU0dBCiow2drBysHcyjg83MHE0TEKIkyXWdoro6W3RCHeMSMHAIScgAFAqLGUohkMgB5OXpsOuJYMgA5BVRczZIoMiZiFUJsPK41gEEAVQBlAFEACIVTQ1F71KqNXTBBxkJzWbwOaxtazBEYOIYIGzWMhhELBfQmGIdEwLDxLFKrMgbQr0QRgMoHI7sU7nK43fKFe6PZ6qN5cf4XQFAkFVMGnBp6EzBMjBZy6VEtExOPxWTHOcwyzW6KIuOUmCTBIzWMlJZapdabOk7PaHY6sy7XW5c4gPABqhFoCgYsFQCjkRwg1OwAFdYJABUKRdJQUpwRpIYhelExiEokSjJqYeZMTFDEYOs45RJwqijM5TRSVmkaVt6Yy7Sy1GdHRy7q6yB6vT6-QHIGR-jQI0JOeUY2K4xLEwhzLZjEa0UF01ZpZjAj5oiZvDCHAW5SaEuTktXLbTtgzdkz7c3zrX7h8fgDgeP5JPm5KEPLYU5nB1NS5M3MNwPEQZVYWCCRnENfoJG6AJpUrY8LWpK1zwbZkThvFCXSgSNhWfSpX1qd9pw1GU0QiX8omiItxnVajcTRZVzEgkxTAGRDzSpABhfAwFwABrZg+E4T41iYLhRSI+MP3QWZYWROxdAGAl2mNTFxlhUw5W8VE2IMBFOMpNJeP4oTWHYUTxK4LRfROchsBYVB6AACggiQAEouDNYzyFMwThMssAxKYKTqjfCFQEadAIPIyIlOVTN9B1TFVLISCgKgqJ+hhCRmiMk9sLrG0rybdQ2SdUd7zWdJPgATSYC4AHEwvFEiouGNoxhLHddwmJEcxAppmjIWdQl6CYNSJCsyWIBRaHgKofJPWNiMi7REBilpZXi+xEssAwokxdBnB8IInAMIw0wmOJD2W5CqCHRgLP4VaZOndAWPzLooKCWZpQGTEWNG1VCQNEJDtJO6q2QzJsmdLY3qnDqEFCUYVzaIsYmcNiJkxGw4WCIkWhiQ0IicArkNra0L08Cc1oTFH0BTewggO9ycYRYINJGdKS1RWDxmsYlbsWJCqWptDL0bTDyqR9qNqxcw4QGgtFMVCQMSGzUfF6GF02ootgmCSmJdQ+tpYwh12QR+55fWxowhVhE1ZRRctbp3oTDIHHTrsPLzuiU2a3NkqZetyr2weJ4Xjee3GcVqx0dO5oIYkPxTCMXMizIGI5RRTXSwPMWuJDs8LdtK2sJtqqOy7MBvV9f1A3jj9unzBcRiMZc-G5oazEMRTAgm9FjeD09itp0rZZbGuo87T0G57Zv+zWUNwwgVvp16HEgPOhx0wLSw+7p7FRoReVD9RBxYPHoqafQ69ytbW268Xxve0DAch03+n3pR42MorDdzZsWaUMR1TKlxFRFwW5DTZXMHfSWFdp4OjvK6LeKNjTOFzmYY0Cp07C3TLmK6PsXDZXGLOFw3Q77+XMiJYK4lMEgF7F4LcxhHDtCRMpNoR0QB5DAE5TaBDZQ63lMpLo5Y5TuAAEbXD9JgLwTsjCcPhDw4W7g6CECgPgVAm1AiiKNOIpw3gizAQAO6elQPgPQLF3B8W0bo0CWtooiL1uWewJipHATpuYdhKj+hcLsC4YW8R4hAA */
       initial: "Check IframeAPI",
       predictableActionArguments: true,
       context: {
@@ -72,10 +72,6 @@ export const createYtPlayerMachine = ({
 
               states: {
                 "Not playing": {
-                  on: {
-                    PLAYING: "Playing",
-                  },
-
                   states: {
                     Initial: {
                       on: {
@@ -108,6 +104,13 @@ export const createYtPlayerMachine = ({
                   },
 
                   initial: "Initial",
+
+                  on: {
+                    PLAYING: {
+                      target: "Playing",
+                      actions: "pause other players",
+                    },
+                  },
                 },
 
                 Playing: {
@@ -167,6 +170,14 @@ export const createYtPlayerMachine = ({
             iframeAPILoaded: window.iframeApiReady || false,
           };
         }),
+        "pause other players": (context, event) => {
+          console.log(`Pausing other players than ${context.videoId}`);
+          for (let player in window.YTPlayers) {
+            if (player !== context.videoId) {
+              window.YTPlayers[player].pauseVideo();
+            }
+          }
+        },
       },
       guards: {
         "iframeAPI loaded": (context, event) => {

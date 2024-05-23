@@ -4,4 +4,7 @@
 interface Window {
   onYouTubeIframeAPIReady: () => void;
   iframeApiReady: boolean | undefined;
+  YTPlayers: {
+    [id: string]: YT.Player;
+  };
 }

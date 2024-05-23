@@ -20,6 +20,7 @@ export interface Typegen0 {
     "assign embedString": "";
     "assign iframe rendered": "iframe rendered";
     "assign iframeAPI loaded": "xstate.after(300)#yt-machine.Check IframeAPI";
+    "pause other players": "PLAYING";
     "play from start": "replay";
   };
   eventsCausingDelays: {};
