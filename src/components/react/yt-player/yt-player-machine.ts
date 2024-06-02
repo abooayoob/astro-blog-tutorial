@@ -16,9 +16,11 @@ export const createYtPlayerMachine = ({
 }) =>
   createMachine(
     {
-      /** @xstate-layout N4IgpgJg5mDOIC5QE8AuBaAtgQwMYAsBLAOzADoAlMYiMAJwAIBJAMzu0zAGJC2OwGdarSEQA2gAYAuolAAHAPaxCqQguKyQAD0QBGCbrIB2ACy6ATLpMBOa7osAOBwDYANCGSJzRsibPWjCSMAZmsJaxNnAFYjAF9Y9zQsPCJSMgAZBWwIBjkAG2xkei4hbORJGSQQRWVVdU0dBCiow2drBysHcyjg83MHE0TEKIkyXWdoro6W3RCHeMSMHAIScgAFAqLGUohkMgB5OXpsOuJYMgA5BVRczZIoMiZiFUJsPK41gEEAVQBlAFEACIVTQ1F71KqNXTBBxkJzWbwOaxtazBEYOIYIGzWMhhELBfQmGIdEwLDxLFKrMgbQr0QRgMoHI7sU7nK43fKFe6PZ6qN5cf4XQFAkFVMGnBp6EzBMjBZy6VEtExOPxWTHOcwyzW6KIuOUmCTBIzWMlJZapdabOk7PaHY6sy7XW5c4gPABqhFoCgYsFQCjkRwg1OwAFdYJABUKRdJQUpwRpIYhelExiEokSjJqYeZMTFDEYOs45RJwqijM5TRSVmkaVt6Yy7Sy1GdHRy7q6yB6vT6-QHIGR-jQI0JOeUY2K4xLEwhzLZjEa0UF01ZpZjAj5oiZvDCHAW5SaEuTktXLbTtgzdkz7c3zrX7h8fgDgeP5JPm5KEPLYU5nB1NS5M3MNwPEQZVYWCCRnENfoJG6AJpUrY8LWpK1zwbZkThvFCXSgSNhWfSpX1qd9pw1GU0QiX8omiItxnVajcTRZVzEgkxTAGRDzSpABhfAwFwABrZg+E4T41iYLhRSI+MP3QWZYWROxdAGAl2mNTFxlhUw5W8VE2IMBFOMpNJeP4oTWHYUTxK4LRfROchsBYVB6AACggiQAEouDNYzyFMwThMssAxKYKTqjfCFQEadAIPIyIlOVTN9B1TFVLISCgKgqJ+hhCRmiMk9sLrG0rybdQ2SdUd7zWdJPgATSYC4AHEwvFEiouGNoxhLHddwmJEcxAppmjIWdQl6CYNSJCsyWIBRaHgKofJPWNiMi7REBilpZXi+xEssAwokxdBnB8IInAMIw0wmOJD2W5CqCHRgLP4VaZOndAWPzLooKCWZpQGTEWNG1VCQNEJDtJO6q2QzJsmdLY3qnDqEFCUYVzaIsYmcNiJkxGw4WCIkWhiQ0IicArkNra0L08Cc1oTFH0BTewggO9ycYRYINJGdKS1RWDxmsYlbsWJCqWptDL0bTDyqR9qNqxcw4QGgtFMVCQMSGzUfF6GF02ootgmCSmJdQ+tpYwh12QR+55fWxowhVhE1ZRRctbp3oTDIHHTrsPLzuiU2a3NkqZetyr2weJ4Xjee3GcVqx0dO5oIYkPxTCMXMizIGI5RRTXSwPMWuJDs8LdtK2sJtqqOy7MBvV9f1A3jj9unzBcRiMZc-G5oazEMRTAgm9FjeD09itp0rZZbGuo87T0G57Zv+zWUNwwgVvp16HEgPOhx0wLSw+7p7FRoReVD9RBxYPHoqafQ69ytbW268Xxve0DAch03+n3pR42MorDdzZsWaUMR1TKlxFRFwW5DTZXMHfSWFdp4OjvK6LeKNjTOFzmYY0Cp07C3TLmK6PsXDZXGLOFw3Q77+XMiJYK4lMEgF7F4LcxhHDtCRMpNoR0QB5DAE5TaBDZQ63lMpLo5Y5TuAAEbXD9JgLwTsjCcPhDw4W7g6CECgPgVAm1AiiKNOIpw3gizAQAO6elQPgPQLF3B8W0bo0CWtooiL1uWewJipHATpuYdhKj+hcLsC4YW8R4hAA */
+      /** @xstate-layout N4IgpgJg5mDOIC5QE8AuBaAtgQwMYAsBLAOzADoAlMYiMAJwAIBJAMzu0zAGJC2OwGdarSEQA2gAYAuolAAHAPaxCqQguKyQAD0QBGCbrIB2ACy6ATLpMBOa7osAOBwDYANCGSJzRsibPWjCSMAZmsJaxNnAFYjAF9Y9zQsPCJSMgAZBWwIBjkAG2xkei4hbORJGSQQRWVVdU0dBCiow2drBysHcyjg83MHE0TEKIkyXWdoro6W3RCHeMSMHAIScgAFAqLGUohkMgB5OXpsOuJYMgA5BVRczZIoLjX0gEEATSYLgHEKzRqVNQ0VUaUTaYwkEmCTgcRgmDms5iGTWaZHM1lCvQmznMJhBCw8SxSqzIG0K9EEYDKByO7FO5yuN3yhXuZCYxH+2Dyj2eAFUAMoAUQAIj8qn9Tg09JCyE54UY4W00SMHIibNYyGEQsF9Di5VY8Ullql1psyTs9odjrTLtdbkziFAWWzVByuPyLoKhSL5Ep-vUgXoTMEyMFnLpFZ0BmZBh5EFig+YtVEXCGTBCjNZ9QSVmkSVtyZSLTSAXSbYzkMyAGqEWgKBiwVAKORHCDE7AAV1gkFd7s90l+PvF-oQvSiYxCUR1CchCJjTSMhl1zhD4NswRhmeS2eNpO2FN2VMtxetDLu9rIVZrdYbTcgZH5NC7QjLXuqA4BEoQqLVIXHQQnVkDRFAh8aITG8SFoQcEMMwSfFNyNYkTV3AtqROI9c3uLk+V7SpvVqd8h1DBxpRcDoExcIw+jcWcTCcYMJGcCF+gkboAkDDdDSJXNTT3c1UKtDD7W7D1hT7UU3z9UBGjjYMogiZwHBBEEtWozwEGiZx1WCCcugYkxTAGDjCTSABhfAwFwABrZg+E4Z41iYLgXzFAipMQdBZmI6w2nsAYtXadNEXGYjTBDbw0X0gx4SMrcyDMizrNYdg7IcrgtHrE5yGwFhUHoAAKYJwQASi4A1jPIeKrJs5KwHsphnIkwE3IQdBCpMWTTAMGEoNRYJEWCMCyCiBNGOhCIQ1CKJ4lg4gFFoeAqjKrd+3wyTtHcswfCsOwDEUyxTERdBnB8IInAkaEsXMBj0xihCqAfRgkv4FbfSa9aWquhcukYoJZkDAZESulE-HsCQ-CCQrdAnW6iUybJbS2F7B2a0JRgAtolxiZx9ImFU1SgnEWhiCEIicGGcyQ-NdiR1z3vQUdQco-RCr0+E+tnKHRnBcIwKonpjqm2CloQ7jkP3Qs0PUBa8Nej9Bplbx5VXJVAbXYNyL8dMod6PUhazEXKbNA8iyl48EfuGm1saMISNlJXFXO-rsTIbHjrlPbrCTHFye3PMjYlq16XNs9WXZPJLbexorDRgWYhZzX9MRZShpCCZbHO8JbB9xCdypvjD1NoOy0raswFretG2bCOP26Bc120v8o0Amj7HVNp51RKxIVo7PRbz43JbOM3i7PC8y6vSvbzWdtOwgauh16NVzEY92JzlSx2bU1UUXhUM17RBwWN7w3eIHwPS1PB0x-L69mzvB85-E1bI8QYI37GfSRko5dAxiRFsa8gpJM2MrraT6MfXO-t+LoUvvPZq6ZNL-i1mEGwzRoxqRiCBFww1xiohcN0bOlVEq2Vqg5OBdNoIfx2roPaf1AaWBdkYNBRhxyzF1vEIAA */
       initial: "Check IframeAPI",
+
       predictableActionArguments: true,
+
       context: {
         iframeRendered: false,
         videoId,
@@ -28,6 +30,7 @@ export const createYtPlayerMachine = ({
         embedString: "",
         iframeAPILoaded: false,
       },
+
       schema: {
         context: {} as {
           iframeRendered: boolean;
@@ -46,7 +49,9 @@ export const createYtPlayerMachine = ({
           | { type: PlayerStates }
           | { type: PlayerErrors },
       },
+
       tsTypes: {} as import("./yt-player-machine.typegen").Typegen0,
+
       states: {
         "Render Iframe": {
           on: {
@@ -138,10 +143,13 @@ export const createYtPlayerMachine = ({
               actions: "assign iframeAPI loaded",
             },
           },
+
+          description: `Check if the iframe Api is already loaded globally`,
         },
       },
 
       id: "yt-machine",
+      description: `ALLCAPS events are emitted from the YouTube player`,
     },
     {
       actions: {
